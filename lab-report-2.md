@@ -92,13 +92,31 @@ This runs output(parameters[1]), which returns a string that contains all string
 
 ```java
  @Test 
-	public void testReverseInPlaceNonSymmetric() {
-    int[] input1 = {1, 2, 3, 4, 5};
-    ArrayExamples.reverseInPlace(input1);
-    assertArrayEquals(new int[]{5, 4, 3, 2, 1 }, input1);
-	}
+ public void testReverseInPlaceNonSymmetric() {
+ 	int[] input1 = {1, 2, 3, 4, 5};
+ 	ArrayExamples.reverseInPlace(input1);
+ 	assertArrayEquals(new int[]{5, 4, 3, 2, 1 }, input1);
+ }
   ```
   
   Symptom: the returned array is mirrored about middle element instead of being reversed.
+  
   Bug: the method should first create a temporary copy of the input array so the array does not reference its own modified values when reversing itself. 
+  
   Connection: After crossing the middle element of the array, the array looks at the first half of itself, the half that has already been modified to reflect the second half of the array. This causes the array to be mirrored around the middle element.
+ 
+```java
+ @Test
+ public void testFilterMultiple() {
+ 	List<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        assertEquals(list, ListExamples.filter(list, new TrueCheck()));
+ }
+    ```
+ Symptom: the returned list is in reverse order.
+ 
+ Bug: the method adds each element of the input list at index 0, when it should simply add them to the end.
+ 
+ Connection: since each element is added at index 0, the last element of the list will be placed at the beginning of the returned list, indicating the list was reversed.
