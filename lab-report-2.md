@@ -97,7 +97,7 @@ This runs output(parameters[1]), which returns a string that contains all string
  	ArrayExamples.reverseInPlace(input1);
  	assertArrayEquals(new int[]{5, 4, 3, 2, 1 }, input1);
  }
-  ```
+ ```
   
   Symptom: the returned array is mirrored about middle element instead of being reversed.
   
@@ -114,7 +114,7 @@ This runs output(parameters[1]), which returns a string that contains all string
         list.add("c");
         assertEquals(list, ListExamples.filter(list, new TrueCheck()));
  }
-    ```
+ ```
  Symptom: the returned list is in reverse order.
  
  Bug: the method adds each element of the input list at index 0, when it should simply add them to the end.
