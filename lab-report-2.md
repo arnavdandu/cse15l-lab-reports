@@ -100,8 +100,12 @@ This runs output(parameters[1]), which returns a string that contains all string
  ```
   
   Symptom: the returned array is mirrored about middle element instead of being reversed.
+
+  ![symp1](images/lab3symptom1.png)
   
   Bug: the method should first create a temporary copy of the input array so the array does not reference its own modified values when reversing itself. 
+
+  ![bug1](images/lab3bug1.png)
   
   Connection: After crossing the middle element of the array, the array looks at the first half of itself, the half that has already been modified to reflect the second half of the array. This causes the array to be mirrored around the middle element.
  
@@ -116,7 +120,11 @@ This runs output(parameters[1]), which returns a string that contains all string
  }
  ```
  Symptom: the returned list is in reverse order.
+
+ ![symp1](images/lab3symptom2.png)
  
  Bug: the method adds each element of the input list at index 0, when it should simply add them to the end.
+
+ ![bug2](images/lab3bug2.png)
  
  Connection: since each element is added at index 0, the last element of the list will be placed at the beginning of the returned list, indicating the list was reversed.
