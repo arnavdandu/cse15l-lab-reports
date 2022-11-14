@@ -26,5 +26,4 @@ I would prefer using the second method; scp (and typing in my password multiple 
 The gap could be bridged a bit if I had an RSA key on this computer, but I still think Vim would be faster overall.
 
 If the modifications to the code were not as simple as the example I chose, however, I would probably use the first method. 
-
 This is because I am used to the features, such as code autocomplete and error highlighting, offered by VSCode.
