@@ -9,7 +9,7 @@
   
 ![step2](images/7step2.png)
   
-## `r(args[1]));`
+## `r(args[1]));<Esc>`
   
 ![step3](images/7step3.png)
   
