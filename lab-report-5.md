@@ -1,3 +1,4 @@
+# grade.sh
 
 ```bash
 
@@ -39,3 +40,13 @@ CORRECT=$(( $TOTAL_TESTS - $ERRORS ))
 
 echo "Grade: $CORRECT / $TOTAL_TESTS"
 ```
+# Examples with GradeServer
+## Example 1
+![1](images/grade_1.png)
+
+## Example 2
+![2](images/grade_2.png)
+
+## Example 3
+![3](images/grade_3.png)
+
