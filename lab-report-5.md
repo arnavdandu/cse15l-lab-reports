@@ -1,8 +1,5 @@
 
 ```bash
-# Create your grading script here
-
-# set -e
 
 rm -rf student-submission
 rm -f *.class
@@ -39,5 +36,6 @@ cat out.txt | head -n 2 | tail -n 1 > tests.txt
 ERRORS=$(grep -o 'E' tests.txt | wc -l | xargs)
 TOTAL_TESTS=$(grep -o '\.' tests.txt | wc -l | xargs)
 CORRECT=$(( $TOTAL_TESTS - $ERRORS ))
+
 echo "Grade: $CORRECT / $TOTAL_TESTS"
 ```
