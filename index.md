@@ -1,5 +1,4 @@
 # *Hello!*
-## `Welcome!`
 ---
 **Here are links to...**
 - [Lab Report 0](lab-report-0-week-0.html)
@@ -9,5 +8,5 @@
 - [Lab Report 4](week7-lab-report.html)
 
 ---
-> VSCode >>> Eclipse
+
 
