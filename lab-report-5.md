@@ -71,7 +71,7 @@ Evaluates to false, as the git clone was successful\
 Lines 7-8 do not run as the previous if statement was false.\
 
 10: `echo "Cloning repository at \"$1\"..."`\
-stdout: Cloning repository at "https://github.com/ucsd-cse15l-f22/list-methods-filename"...\
+stdout: Cloning repository at "https://github.com/ucsd-cse15l-f22/list-methods-filename"... \
 stderr:\
 exit code: 0
 
