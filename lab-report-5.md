@@ -77,7 +77,7 @@ exit code: 0
 
 13: `[ -f student-submission/ListExamples.java ]; then`\
 Evaluates to false, as the file is named ListMethods.java instead of ListExamples.java, and thus cannot be found.\
-Lines 14-21 do not run as the previous if statement was false.\
+Lines 14-21 do not run as the previous if statement was false.
 
 23: `echo "Couldn't find ListExamples.java. Make sure your files are named correctly and are not nested in another directory."`\
 stdout: Couldn't find ListExamples.java. Make sure your files are named correctly and are not nested in another directory.\
