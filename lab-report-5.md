@@ -55,19 +55,16 @@ echo "Grade: $CORRECT / $TOTAL_TESTS"
 stdout:\
 stderr:\
 exit code: 0
-\
 
 2: `rm -f *.class`\
 stdout:\
 stderr:\
 exit code: 0
-\
 
 4: `git clone $1 student-submission > out.txt 2> err.txt` \
 stdout: Cloning into 'student-submission'... [cont.]\
 stderr: \
 exit code: 0
-\
 
 6: `if [ $? -ne 0 ]; then`\
 Evaluates to false, as the git clone was successful\
@@ -77,7 +74,6 @@ Lines 7-8 do not run as the previous if statement was false.\
 stdout: Cloning repository at "https://github.com/ucsd-cse15l-f22/list-methods-filename"...\
 stderr:\
 exit code: 0
-\
 
 13: `[ -f student-submission/ListExamples.java ]; then`\
 Evaluates to false, as the file is named ListMethods.java instead of ListExamples.java, and thus cannot be found.\
@@ -87,7 +83,6 @@ Lines 14-21 do not run as the previous if statement was false.\
 stdout: Couldn't find ListExamples.java. Make sure your files are named correctly and are not nested in another directory.\
 stderr: \
 exit code: 0
-\
 
 24: `exit 1`\
 Program exits early here since the file was not found, so lines 25-end do not run.
